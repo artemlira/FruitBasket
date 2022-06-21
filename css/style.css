@@ -1,0 +1,135 @@
+body {
+   text-align: center;
+   box-sizing: border-box;
+   color: #616870;
+   font-size: 20px;
+}
+
+.wrapper {
+   height: 100vh;
+   width: 100vw;
+   display: grid;
+   justify-content: center;
+   align-items: center;
+}
+
+.container {
+   height: 50vh;
+   max-height: 411px;
+   width: 80vw;
+   max-width: 1112px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.section_left,
+.section_right {
+   display: grid;
+   grid-template: 7vh 1fr/1fr;
+}
+
+.section_left_title,
+.section_right_title {
+   display: grid;
+   align-items: center;
+}
+
+.section_left img {
+   width: 100%;
+}
+
+.section_right {
+   background-color: #c8c8c8;
+}
+
+.section_right_title {
+   display: grid;
+   grid-template-columns: repeat(2, 50px);
+   justify-content: center;
+}
+
+.section_right_images,
+.section_left_images {
+   display: grid;
+   grid-template: repeat(2, 1fr)/repeat(4, 1fr);
+   justify-content: space-between;
+   align-items: stretch;
+   grid-row-gap: 4%;
+   grid-column-gap: 2%;
+   padding: 40px;
+   border: 1px solid #000;
+}
+
+.section_left_images {
+   border: none;
+}
+
+.right__cell,
+.left__cell {
+   overflow: hidden;
+   border: 1px dotted #000;
+}
+
+.section_right img {
+   width: 100%;
+   background-color: #fff;
+}
+
+.hide {
+   display: none;
+}
+
+.hovered {
+   background-color: rgb(224, 224, 224);
+}
+
+@media screen and (max-width:968px) {
+
+   .container {
+      height: 50vh;
+      width: 65vw;
+   }
+
+   .section_left_images,
+   .section_right_images {
+      display: grid;
+      grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+      padding: 12px;
+   }
+}
+
+@media screen and (max-width:768px) {
+
+   .container {
+      height: 80vh;
+      width: 75vw;
+      max-height: none;
+   }
+
+   .section_left_images,
+   .section_right_images {
+      display: grid;
+      grid-template: repeat(4, 1fr)/repeat(2, 1fr);
+   }
+}
+
+@media screen and (max-width:520px) {
+
+   .container {
+      max-height: none;
+      min-height: 100%;
+      width: 65vw;
+   }
+
+   .section_left_images,
+   .section_right_images {
+      display: grid;
+      grid-template: repeat(8, 1fr)/1fr;
+      height: 100%;
+   }
+
+   .section_left img {
+      height: 55%;
+      width: 55%;
+   }
+}
